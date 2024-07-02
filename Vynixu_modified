@@ -100,7 +100,7 @@ Top.Size = UDim2.new(1, 25, 0, 25)
 
 OpenClose.Name = "OpenClose"
 OpenClose.Parent = Top
-OpenClose.Position = UDim2.new(0, 0, 15, 20)
+OpenClose.Position = UDim2.new(-1, 0, 0, 0)
 OpenClose.AnchorPoint = Vector2.new(0, 0)
 OpenClose.BackgroundColor3 = Color3.new(0.392157, 0, 1)
 OpenClose.BorderSizePixel = 0
