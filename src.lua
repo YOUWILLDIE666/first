@@ -36,4 +36,3 @@ for _, this in ipairs(data:GetDescendants()) do
     end
 end
 -- instant reload
-game.Players.LocalPlayer:LoadCharacter() -- auto kill
