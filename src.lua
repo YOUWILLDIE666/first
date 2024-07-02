@@ -33,7 +33,7 @@ for _, this in ipairs(data:GetDescendants()) do
         this.Value = 9999999 -- bruh
     --[[elseif this:IsA("IntValue") and this.Name in tools then
         this.Value = 1          --no :)--]]--
-        task.wait(5)
-        game.Players.LocalPlayer.Character:BreakJoints() -- auto kill
     end
 end
+-- instant reload
+game.Players.LocalPlayer.Character:BreakJoints() -- auto kill
