@@ -1,4 +1,4 @@
--- MADE BY YOU WILL DIE :thumbsup:
+-- MADE BY YOU WILL DIE :thumbsup: open source
 
 -- helper function because fucking lua sucks dick
 function isInTable(tbl:{}, value:any)
