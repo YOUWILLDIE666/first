@@ -36,4 +36,4 @@ for _, this in ipairs(data:GetDescendants()) do
     end
 end
 -- instant reload
-game.Players.LocalPlayer.Character:BreakJoints() -- auto kill
+game.Players.LocalPlayer:LoadCharacter() -- auto kill
