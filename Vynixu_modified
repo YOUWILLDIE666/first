@@ -95,11 +95,13 @@ Top.Name = "Top"
 Top.Parent = Holder
 Top.BackgroundColor3 = Color3.new(0.392157, 0, 1)
 Top.BorderSizePixel = 0
-Top.Position = UDim2.new(0, 0, 0, -25)
-Top.Size = UDim2.new(1, 0, 0, 25)
+Top.Position = UDim2.new(0, -25, 0, -25)
+Top.Size = UDim2.new(1, 25, 0, 25)
 
 OpenClose.Name = "OpenClose"
 OpenClose.Parent = Top
+OpenClose.Position = UDim2.new(0, -250, 15, 20)
+OpenClose.AnchorPoint = Vector2.new(0, 0)
 OpenClose.BackgroundColor3 = Color3.new(0.392157, 0, 1)
 OpenClose.BorderSizePixel = 0
 OpenClose.Rotation = -90
