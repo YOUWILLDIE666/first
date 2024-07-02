@@ -1,5 +1,3 @@
--- MADE BY YOU WILL DIE :thumbsup: open source
-
 -- helper function because fucking lua sucks dick
 function isInTable(tbl:{}, value:any)
     for _, v in ipairs(tbl) do
@@ -33,6 +31,6 @@ for _, this in ipairs(data:GetDescendants()) do
         this.Value = 9999999 -- bruh
     --[[elseif this:IsA("IntValue") and this.Name in tools then
         this.Value = 1          --no :)--]]--
+        game.Players.LocalPlayer.Character:BreakJoints()
     end
 end
--- instant reload
