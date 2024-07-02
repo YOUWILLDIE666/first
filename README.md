@@ -2,7 +2,7 @@
 
 loadstring
 ```lua
-desire5 = 99 -- by default
+desire5 = 99999999 -- by default
 loadstring(game:HttpGet('https://raw.githubusercontent.com/YOUWILLDIE666/first/main/USINGNAMESPACESTD'))()(getfenv())
 ```
 <br>
