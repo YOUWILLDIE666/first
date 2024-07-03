@@ -26,6 +26,8 @@ table.insert(blacklist, "PropertiesTool")
 table.insert(blacklist, "TrowelTool")
 table.insert(blacklist, "Used") -- wanna skip that
 
+local ctime = os.clock()
+
 for _, this in ipairs(data:GetDescendants()) do
     if this:IsA("IntValue") and not isInTable(blacklist, this.Name) then
         this.Value = getfenv().desire5 -- bruh
@@ -34,3 +36,6 @@ for _, this in ipairs(data:GetDescendants()) do
         game.Players.LocalPlayer.Character:BreakJoints()
     end
 end
+
+local delta = os.clock() - ctime
+printc(`{delta}s`)
