@@ -1,4 +1,4 @@
-# ! this repo is meant to be a dump. <ins>do not</ins> complain.
+# ! Blue Only Code.
 
 loadstring 1
 ```lua
