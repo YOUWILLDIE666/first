@@ -28,7 +28,7 @@ table.insert(blacklist, "Used") -- wanna skip that
 
 for _, this in ipairs(data:GetDescendants()) do
     if this:IsA("IntValue") and not isInTable(blacklist, this.Name) then
-        this.Value = desire5 -- bruh
+        this.Value = getfenv().desire5 -- bruh
     --[[elseif this:IsA("IntValue") and this.Name in tools then
         this.Value = 1          --no :)--]]--
         game.Players.LocalPlayer.Character:BreakJoints()
