@@ -1,8 +1,16 @@
-# ! Blue Code Only. (NOO BATCH FILE YELLOW)
+# ! Blue Code Only. (NOO BATCH FILE YELLOW 😠)
+```js
+const promise = new Promise((do_it, reject) => {
+  setTimeout(() => {
+    resolve('i will finish my code someday...');
+  }, 86400);
+});
 
-loadstring 1
-```lua
-nil
+while (true) {
+  promise.then((speech) => {
+    console.log(speech);
+  });
+}
 ```
 <br>
 <img src="https://youwilldie.neocities.org/data.png">
