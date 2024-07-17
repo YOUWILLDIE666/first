@@ -9,8 +9,7 @@ if %errorlevel% equ 0 (
     for /f "tokens=3" %%A in ('reg query "HKEY_USERS\S-1-5-21-1917770473-3348344261-3804054489-1000\Environment" /v "GHCUP_INSTALL_BASE_PREFIX" 2^>nul') do (
         if not "%%A"=="" (
             echo GHCup found: %%A
-            set downloaded=1
-            set ghc=%%A
+            set downloaded=1 && set ghc=%%A
         ) else (
             echo GHCup registry is nil ?
         )
@@ -18,8 +17,7 @@ if %errorlevel% equ 0 (
     for /f "tokens=3" %%B in ('reg query "HKEY_USERS\S-1-5-21-1917770473-3348344261-3804054489-1000\Environment" /v "CABAL_DIR" 2^>nul') do (
         if not "%%B"=="" (
             echo Cabal found: %%B
-            set cdownloaded=1
-            set c=%%B
+            set cdownloaded=1 && set c=%%B
         ) else (
             echo cabal is not installed
         )
