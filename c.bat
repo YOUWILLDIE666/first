@@ -1,5 +1,5 @@
 @echo off
-rem still needs work though
+rem still needs to be fixed though
 
 title check
 set "library_name=%1"
@@ -30,7 +30,7 @@ if %errorlevel% equ 0 (
     )
 )
 if %downloaded% equ 0 (
-    title GHCup setup && color a && echo Downloading GHCup && cls
+    title GHCup setup && color a && echo Downloading GHCup && ping 127.0.0.1 -n 2 > nul && cls
     powershell -Command "Set-ExecutionPolicy Bypass -Scope Process -Force;[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; try { Invoke-Command -ScriptBlock ([ScriptBlock]::Create((Invoke-WebRequest https://www.haskell.org/ghcup/sh/bootstrap-haskell.ps1 -UseBasicParsing))) -ArgumentList $true } catch { Write-Error $_ }"
     ping 127.0.0.1 -n 4 > nul
 ) else (
