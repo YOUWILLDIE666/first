@@ -44,7 +44,8 @@ if %cdownloaded% equ 0 (
     echo Skipping cabal setup...
     ping 127.0.0.1 -n 2 > nul
 )
-dir "%ghc%\cabal\packages\hackage.haskell.org\%library_name%" 2>nul :: i hate myself :)
+dir "%ghc%\cabal\packages\hackage.haskell.org\%library_name%" 2>nul
+rem the line below this is STUPID.
 if %errorlevel% equ 0 (
     echo Found %library_name% library, skipping
 ) else (
