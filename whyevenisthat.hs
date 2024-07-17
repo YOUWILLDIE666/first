@@ -24,7 +24,7 @@ data Expr =
     | Fun String [String] Expr
     | Call Expr [Expr]
     | Seq [Expr]
-    | Repeat Expr Expr -- !
+    | Repeat Expr Expr
     deriving (Show, Eq)
 
 type Env = Map.Map String Value
@@ -123,13 +123,13 @@ eval env (And e1 e2) = do
     v2 <- eval env e2
     case (v1, v2) of
         (BoolVal b1, BoolVal b2) -> Right $ BoolVal (b1 && b2)
-        _ -> Left "Cannot apply and to non-boolean values"
+        _ -> Left "Cannot apply 'and' to non-boolean values"
 eval env (Or e1 e2) = do
     v1 <- eval env e1
     v2 <- eval env e2
     case (v1, v2) of
         (BoolVal b1, BoolVal b2) -> Right $ BoolVal (b1 || b2)
-        _ -> Left "Cannot apply or to non-boolean values"
+        _ -> Left "Cannot apply 'or' to non-boolean values"
 eval env (If cond e1 e2) = do
     v <- eval env cond
     case v of
@@ -172,7 +172,7 @@ main = do
     let expr2 = Let "x" (IntLit 5) (Add (Ident "x") (IntLit 2))
     let expr3 = Fun "add" ["x", "y"] (Add (Ident "x") (Ident "y"))
     let expr4 = Eq (IntLit 1) (IntLit 1)
-    let expr5 = Repeat (Fun "inc" ["x"] (Add (Ident "x") (IntLit 1))) (IntLit 5) -- !
+    let expr5 = Repeat (Fun "inc" ["x"] (Add (Ident "x") (IntLit 1))) (IntLit 5)
 
     putStrLn "Evaluating expr1..."
     case eval env expr1 of
@@ -194,7 +194,7 @@ main = do
         Left err -> putStrLn $ "Error: " ++ err
         Right v -> print v
 
-    putStrLn "Evaluating expr5..." -- !
+    putStrLn "Evaluating expr5..."
     case eval env expr5 of
         Left err -> putStrLn $ "Error: " ++ err
         Right v -> print v
