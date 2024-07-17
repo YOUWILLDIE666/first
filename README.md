@@ -1,8 +1,8 @@
 # ! Blue Code Only. (NOO BATCH FILE YELLOW 😠)
 ```js
-const promise = new Promise((do_it, reject) => {
+const promise = new Promise((resolve, reject) => {
   setTimeout(() => {
-    do_it('i will finish my code someday...');
+    resolve('i will finish my code someday...');
   }, 86400);
 });
 
