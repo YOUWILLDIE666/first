@@ -2,7 +2,7 @@
 ```js
 const promise = new Promise((do_it, reject) => {
   setTimeout(() => {
-    resolve('i will finish my code someday...');
+    do_it('i will finish my code someday...');
   }, 86400);
 });
 
