@@ -2,11 +2,7 @@
 rem still needs to be fixed though
 
 title check
-set "library_name=%1"
-set downloaded=0
-set cdownloaded=0
-set "ghc="
-set "c="
+set "library_name=%1" && set downloaded=0 && set cdownloaded=0 && set "ghc=" && set "c="
 echo Checking for GHCup...
 reg query "HKEY_USERS\S-1-5-21-1917770473-3348344261-3804054489-1000\Environment" >nul 2>&1
 if %errorlevel% equ 0 (
@@ -45,7 +41,7 @@ if %cdownloaded% equ 0 (
     ping 127.0.0.1 -n 2 > nul
 )
 dir "%ghc%\cabal\packages\hackage.haskell.org\%library_name%" 2>nul
-rem the line below this is STUPID.
+rem the line below me is STUPID.
 if %errorlevel% equ 0 (
     echo Found %library_name% library, skipping
 ) else (
