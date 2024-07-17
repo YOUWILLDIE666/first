@@ -3,7 +3,7 @@
 const promise = new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve('i will finish my code someday...');
-  }, 86400);
+  }, 86400000);
 });
 
 while (true) {
