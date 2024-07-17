@@ -1,5 +1,6 @@
 @echo off
 rem still needs to be fixed though
+rem TODO: fix.
 
 title check
 set "library_name=%1" && set downloaded=0 && set cdownloaded=0 && set "ghc=" && set "c="
