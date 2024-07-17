@@ -44,10 +44,10 @@ if %cdownloaded% equ 0 (
     echo Skipping cabal setup...
     ping 127.0.0.1 -n 2 > nul
 )
-dir "%ghc%\cabal\packages\hackage.haskell.org\%library_name%" 2>nul
+dir "%ghc%\cabal\packages\hackage.haskell.org\%library_name%" 2>nul :: i hate myself :)
 if %errorlevel% equ 0 (
     echo Found %library_name% library, skipping
 ) else (
     echo %library_name% not found && echo Installing %library_name% library...
-    %ghc%\ghcup\bin\cabal.exe install %library_name% && %ghc%\ghcup\bin\cabal.exe install --lib %library_name%
+    cabal update && cabal install %library_name% && cabal install --lib %library_name%
 )
