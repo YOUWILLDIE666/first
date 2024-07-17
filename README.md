@@ -1,4 +1,4 @@
-# ! Blue Only Code.
+# ! Blue Only Code. (NOO BATCH FILE YELLOW)
 
 loadstring 1
 ```lua
