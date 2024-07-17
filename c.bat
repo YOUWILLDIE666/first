@@ -22,7 +22,7 @@ if %errorlevel% equ 0 (
 %ghc%ghcup\bin\cabal.exe list --installed %library_name% | findstr /%ghc%cabal\packages\hackage.haskell.org:"%library_name%" >nul
 
 if %errorlevel% equ 0 (
-    echo 1
+    echo Found %library_name% library, skipping set up
 ) else (
     echo 0
     echo Installing %library_name% library...
