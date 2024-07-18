@@ -1,7 +1,7 @@
 // SysCore.g4
 
-// !!! IsA PARSER
-
+// !!! This is a PARSER
+// also discarded
 grammar SysCore;
 
 // Keywords
