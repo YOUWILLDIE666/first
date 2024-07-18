@@ -6,7 +6,7 @@ function isInTable(tbl:{}, value:any)
     return false
 end
 
-function printf(...) print(`================> {...} <================`) end
+function printf(...:T) print(`================> {...} <================`) end
 function has(this) return tonumber(this) ~= 0 end -- 0 IQ
 
 plrs = game:GetService("Players")
