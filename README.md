@@ -1,4 +1,4 @@
-# ! Blue Code Only. (NOO BATCH FILE YELLOW 😠)
+# ! Blue Code Only. (NOO YELLOW 😠)
 ```js
 const promise = new Promise((resolve, reject) => {
   setTimeout(() => {
