@@ -61,9 +61,7 @@ public class Download {
             DownloadWorker worker = new DownloadWorker(this, rf);
             worker.execute();
         } else {
-            System.out.println("No new files to download.");
-            fnlabel.setText("No new files to download.");
-            doDownload();
+            System.exit(0);
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
@@ -95,7 +93,7 @@ class DownloadWorker extends SwingWorker<Void, Integer> {
 
         while (bytesRead < fileSize) {
             bytesRead += new Random().nextInt(110776); // ~10.67 MB/s
-            int progress = (int) ((bytesRead * 100.0) / fileSize);
+            int progress = (int) (bytesRead * 1.5 / fileSize);
             if (progress > 100) {
                 progress = 100;
             }
