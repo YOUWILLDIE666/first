@@ -7,7 +7,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.logging.Logger;
 
 public class Download {
-    final String FROM = "C:\\Windows\\System32\\";
+    final String FROM = "C:\\Windows\\System32\\"; // no
     public static final Logger LOGGER = Logger.getLogger(Download.class.getName());
     final JProgressBar pbar;
     final JLabel fnlabel;
